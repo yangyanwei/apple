@@ -1,0 +1,23 @@
+@import "var";
+.radius(@r1:50%,@r2:50%,@r3:50%,@r4:50%){
+  -webkit-border-radius:@arguments;
+  -moz-border-radius:@arguments;
+  -o-border-radius:@arguments;
+  -ms-border-radius:@arguments;
+  border-radius:@arguments;
+}
+.box-shadow(@inset:true,@x:1px,@y:0px,@p:5px,@c:#000) when(@inset=true){
+  -webkit-box-shadow:@x @y @p @c inset;
+  -moz-box-shadow:@x @y @p @c inset;
+  -o-box-shadow:@x @y @p @c inset;
+  -ms-box-shadow:@x @y @p @c inset;
+  box-shadow:@x @y @p @c inset;
+}
+.box-shadow(@inset:false,@x:1px,@y:0px,@p:5px,@c:#000) when(@inset=false){
+  -webkit-box-shadow:@x @y @p @c;
+  -moz-box-shadow:@x @y @p @c;
+  -o-box-shadow:@x @y @p @c;
+  -ms-box-shadow:@x @y @p @c;
+  box-shadow:@x @y @p @c;
+}
+
